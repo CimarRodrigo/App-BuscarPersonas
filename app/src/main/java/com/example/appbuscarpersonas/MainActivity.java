@@ -1,5 +1,6 @@
 package com.example.appbuscarpersonas;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
@@ -141,6 +142,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
+    public void buscarDepartamento(View v){
+        Intent i = new Intent(this, BuscarDosActivity.class);
+        startActivity(i);
+    }
     /*
     public void boton(View v){
 

@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
@@ -21,21 +17,44 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/textView20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Ingrese carnet: "
+            android:text="Ingrese profesion: "
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/edtCarnet"
+            android:id="@+id/edtProfesion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
             android:hint="esperando..."
-            android:inputType="number" />
+            android:inputType="text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="57dp"
+            android:layout_weight="1"
+            android:text="Ingrese departamento: "
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/edtDepartamento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="esperando..."
+            android:inputType="text" />
     </LinearLayout>
 
     <LinearLayout
@@ -48,14 +67,15 @@
             android:layout_width="4dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Nombre completo:"
+            android:text="Numero de clientes:"
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/txtNombre"
+            android:id="@+id/txtNumeroClientes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:gravity="center"
             android:textSize="20sp" />
     </LinearLayout>
 
@@ -69,7 +89,7 @@
             android:layout_width="1dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Profesión: "
+            android:text="%Profesion: "
             android:textSize="20sp" />
 
         <TextView
@@ -77,6 +97,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:gravity="center"
             android:textSize="20sp" />
     </LinearLayout>
 
@@ -87,10 +108,10 @@
 
         <TextView
             android:id="@+id/textView7"
-            android:layout_width="wrap_content"
+            android:layout_width="2dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Departamento: "
+            android:text="%Departamento: "
             android:textSize="20sp" />
 
         <TextView
@@ -98,33 +119,34 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:gravity="center"
             android:textSize="20sp" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView9"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cuentas:"
-        android:textSize="20sp"/>
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/txtCuentas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="208dp"
+            android:layout_height="wrap_content"
+            android:text="%General:"
+            android:textSize="20sp" />
 
+        <TextView
+            android:id="@+id/txtGeneral"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="20sp" />
+    </LinearLayout>
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="buscarCarnet"
+        android:onClick="buscar"
         android:text="buscar" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="buscarDepartamento"
-        android:text="Buscar por profesion y departamento" />
 
 </LinearLayout>
